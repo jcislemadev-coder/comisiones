@@ -1,35 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial;
-    background-color: #0f172a;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
 }
 
+/* CONTENEDOR */
 .contenedor {
     background-color: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: fadeIn 0.6s ease;
 }
 
+/* TITULOS */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* GRUPOS */
+.grupo {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    display: block;
+    color: #cbd5f5;
+}
+
+/* INPUTS */
 input {
     width: 100%;
-    margin-bottom: 10px;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
 }
 
+/* BOTÓN */
 button {
     width: 100%;
-    padding: 10px;
-    background-color: #22c55e;
+    padding: 12px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
     border: none;
     color: white;
+    font-size: 1rem;
+    border-radius: 10px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #16a34a;
+    transform: scale(1.03);
+    background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+/* RESULTADOS */
+.resultados p {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.resultados span {
+    font-weight: bold;
+    color: #22c55e;
+}
+
+/* 📱 RESPONSIVE TABLET */
+@media (min-width: 768px) {
+    .contenedor {
+        max-width: 500px;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* 💻 RESPONSIVE DESKTOP */
+@media (min-width: 1024px) {
+    .contenedor {
+        max-width: 600px;
+    }
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
